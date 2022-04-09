@@ -59,7 +59,7 @@ def mention_afk(msg):
                         ),
                     )
                 else:
-                    reply(msg, f"```{choice(AFKSTR)}```")
+                    reply(msg, AFKSTR)
                 TEMP_SETTINGS['AFK_USERS'].update({msg.from_user.id: 1})
                 TEMP_SETTINGS['COUNT_MSG'] = TEMP_SETTINGS['COUNT_MSG'] + 1
             else:
@@ -79,7 +79,7 @@ def mention_afk(msg):
                             ),
                         )
                     else:
-                        reply(msg, f"```{choice(AFKSTR)}```")
+                        reply(msg, AFKSTR)
                     TEMP_SETTINGS['AFK_USERS'][msg.from_user.id] = (
                         TEMP_SETTINGS['AFK_USERS'][msg.from_user.id] + 1
                     )
@@ -122,7 +122,7 @@ def afk_on_pm(message):
                     ),
                 )
             else:
-                reply(message, f"```{choice(AFKSTR)}```")
+                reply(message, AFKSTR)
             TEMP_SETTINGS['AFK_USERS'].update({message.from_user.id: 1})
             TEMP_SETTINGS['COUNT_MSG'] = TEMP_SETTINGS['COUNT_MSG'] + 1
         else:
@@ -142,7 +142,7 @@ def afk_on_pm(message):
                         ),
                     )
                 else:
-                    reply(message, f"```{choice(AFKSTR)}```")
+                    reply(message, AFKSTR)
                 TEMP_SETTINGS['AFK_USERS'][message.from_user.id] = (
                     TEMP_SETTINGS['AFK_USERS'][message.from_user.id] + 1
                 )
