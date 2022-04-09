@@ -22,7 +22,7 @@ from sedenecem.core import (
 )
 
 # ========================= CONSTANTS ============================
-AFKSTR = [get_translation(f'afkstr{i+1}') for i in range(0, 22)]
+AFKSTR = get_translation('afkstr')
 TEMP_SETTINGS['AFK_USERS'] = {}
 TEMP_SETTINGS['IS_AFK'] = False
 TEMP_SETTINGS['COUNT_MSG'] = 0
