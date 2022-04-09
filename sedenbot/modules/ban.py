@@ -70,12 +70,6 @@ def ban_user(client, message):
             message, get_translation('banResult', ['**', user.first_name, user.id, '`'])
         )
         sleep(1)
-        send_log(
-            get_translation(
-                'banLog',
-                [user.first_name, user.id, message.chat.title, '`', chat_id],
-            )
-        )
     except UserAdminInvalid:
         edit(message, f'`{get_translation("banAdminError")}`')
     except Exception as e:
