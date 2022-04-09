@@ -1,5 +1,4 @@
 from time import sleep
-
 from pyrogram.raw.functions.account import UpdateStatus
 from sedenbot import HELP, TEMP_SETTINGS
 from sedenecem.core import (
