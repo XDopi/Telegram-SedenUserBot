@@ -166,7 +166,7 @@ def set_afk(message):
         )
     else:
         edit(message, f'**{get_translation("afkStart")}**')
-    send_log(get_translation('afkLog'))
+
     TEMP_SETTINGS['IS_AFK'] = True
     raise StopPropagation
 
