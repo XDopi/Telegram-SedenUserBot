@@ -176,17 +176,6 @@ def type_afk_is_not_true(message):
         TEMP_SETTINGS['IS_AFK'] = False
         reply(message, f'**{get_translation("afkEnd")}**')
         sleep(2)
-        send_log(
-            get_translation(
-                'afkMessages',
-                [
-                    '`',
-                    '**',
-                    str(len(TEMP_SETTINGS['AFK_USERS'])),
-                    str(TEMP_SETTINGS['COUNT_MSG']),
-                ],
-            )
-        )
         for i in TEMP_SETTINGS['AFK_USERS']:
             name = app.get_chat(i)
             name0 = str(name.first_name)
