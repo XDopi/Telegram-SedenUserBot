@@ -1,5 +1,0 @@
-build: 
-  docker: 
-      seden: Dockerfile
-run:
-   seden: python3 seden.py
